@@ -21,7 +21,7 @@ function countLetters(str) {
       }
     }
   }
-  // console.log(counterObj);
+  // console.log(counterObj); OUTPUT TEST!!!!!
   return counterObj;
 }
 
