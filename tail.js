@@ -1,12 +1,7 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+// const assertEqual = require('./assertEqual');
 
-function tail(arr) {
+const tail = function (arr) {
+  console.log("This is in tail fn: " + arr);
   let tailArr = [];
   if (arr.length <= 1) {
     return tailArr;
@@ -16,19 +11,7 @@ function tail(arr) {
     }
   }
   return tailArr;
-}
+};
 
-console.log(tail([1, 2, 3, 4, 5]));
-console.log(tail([]));
-console.log(tail([100]));
-console.log(tail(["abc"]));
-console.log(tail(["a", "b"]));
+module.exports = tail;
 
-console.log("----------------");
-
-const exArray = ["Hello", "Lighthouse", "Labs"];
-const result = tail(exArray);
-assertEqual(result.length, exArray.length - 1); // ensure we get back two elements
-for (let j = 0; j < result.length; j++) {
-  assertEqual(result[j], exArray[j + 1]);
-}
