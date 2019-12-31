@@ -1,7 +1,6 @@
 // const assertEqual = require('./assertEqual');
 
 const tail = function (arr) {
-  console.log("This is in tail fn: " + arr);
   let tailArr = [];
   if (arr.length <= 1) {
     return tailArr;
